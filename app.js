@@ -15,7 +15,7 @@ buttons.forEach((button) => {
 operatorButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const target = e.target.dataset.num;
-    screen.value += `${target}`;
+    screen.value += ` ${target} `;
   });
 });
 
@@ -34,7 +34,9 @@ clearButton.addEventListener("click", (e) => {
 
 backButton.addEventListener("click", (e) => {
   if (screen.value !== "") {
-    let newScreenValue = screen.value.substring(0, screen.value.length - 1);
-    screen.value = newScreenValue;
+    if (screen.value.charAt(screen.value.length - 1) === " ") {
+      screen.value = screen.value.slice(0, -2);
+    }
+    screen.value = screen.value.substring(0, screen.value.length - 1);
   }
 });
