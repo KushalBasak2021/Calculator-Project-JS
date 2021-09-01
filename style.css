@@ -63,3 +63,7 @@ button:hover {
 .btn-clear {
   background-color: red;
 }
+
+.btn-back {
+  background-color: rgb(17, 131, 112);
+}
